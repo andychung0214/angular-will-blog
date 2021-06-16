@@ -21,7 +21,6 @@
             "aot": false,
             "assets": [
               "src/api",
-              "src/blog-index.html",
               "src/favicon.ico",
               "src/assets"
             ],
