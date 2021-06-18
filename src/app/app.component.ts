@@ -12,12 +12,11 @@ export class AppComponent {
   constructor(){
 
   }
-  changeTitle($event){
-    if($event.altKey)
+  changeTitle($altKey: boolean){
+    if($altKey)
     {
       this.title = 'Changed Title';
-
     }
-    console.log($event);
+    console.log($altKey);
   }
 }
