@@ -10,6 +10,7 @@ export class AppComponent {
   url = 'http://blog.miniasp.com/';
   imgUrl = '/assets/images/logo.png';
   wordLength = 0;
+  keyword='';
   constructor(){
 
   }
@@ -20,12 +21,8 @@ export class AppComponent {
     }
     console.log($altKey);
   }
-  countWord(keyword: string){
-    this.wordLength = keyword.length;
-  }
 
   resetWord(input: HTMLInputElement){
-    input.value = '';
-    this.wordLength = 0;
+    this.keyword = '';
   }
 }
