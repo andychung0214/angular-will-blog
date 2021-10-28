@@ -11,15 +11,23 @@ export class HeaderComponent implements OnInit {
   url = 'http://blog.miniasp.com/';
   imgUrl = '/assets/images/logo.png';
   wordLength = 0;
+  counter = 0;
+
   constructor() { }
 
 
-  changeTitle($altKey: boolean){
-    if($altKey)
-    {
+  changeTitle($altKey: boolean) {
+    if ($altKey) {
       this.title = 'Changed Title';
     }
     console.log($altKey);
+    this.counter++;
+  }
+
+  getStyle() {
+    return {
+      'font-size': (12 + this.counter) + 'px' };
+
   }
 
   ngOnInit() {
