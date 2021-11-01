@@ -1,18 +1,26 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-article-body',
   templateUrl: './article-body.component.html',
   styleUrls: ['./article-body.component.css']
 })
-export class ArticleBodyComponent implements OnInit {
+export class ArticleBodyComponent implements OnInit, OnChanges {
 
   @Input()
   item;
 
-  constructor() { }
+  constructor() {
+    console.log('ArticleBodyComponent: constructor');
+  }
 
   ngOnInit() {
+    console.log('ArticleBodyComponent: ngOnInit');
+
+  }
+
+  ngOnChanges(){
+    console.log('ArticleBodyComponent: ngOnChanges');
   }
 
 }
